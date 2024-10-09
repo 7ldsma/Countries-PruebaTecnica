@@ -8,7 +8,6 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [
     RouterOutlet,
-
     SidebarComponent,
   ],
   templateUrl: './app.component.html',
