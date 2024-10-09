@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-root',
   standalone: true,
   imports: [
+    
     RouterOutlet,
     SidebarComponent,
   ],
