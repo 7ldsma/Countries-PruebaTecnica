@@ -1,0 +1,89 @@
+<h2>Countries</h2>
+<hr>
+
+<div class="sidebar d-flex flex-column justify-content-between">
+
+    <ul class="list-group">
+        @for (item of countryItems; track $index) {
+            <li 
+            [routerLink]="'countries/' + item.path"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            href="#"
+            class="list-group-item"
+            >
+            <span>{{ item.title }}</span>
+            </li>
+        }
+        
+    </ul>
+
+    <ul class="list-group">
+        @for (item of menuItems; track $index) {
+            <li 
+            [routerLink]="item.path"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            href="#"
+            class="list-group-item"
+            >
+            <span>{{ item.title }}</span>
+            </li>
+        }
+        
+    </ul>
+</div>
+
+
+<!-- <ul class="list-group">
+
+    <li 
+    routerLink="home"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="list-group-item">
+        Home
+    </li>
+
+    <li 
+    routerLink="about"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="list-group-item">
+        About
+    </li>
+
+    <li 
+    routerLink="contact"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="list-group-item">
+        contact
+    </li>
+
+    <li 
+    routerLink="countries/by-capital"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="list-group-item">
+        By Capital
+    </li>
+
+    <li 
+    routerLink="countries/by-country"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="list-group-item">
+        By Country
+    </li>
+
+    <li 
+    routerLink="countries/by-region"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    class="list-group-item">
+        By Region
+    </li>
+
+
+</ul> -->
