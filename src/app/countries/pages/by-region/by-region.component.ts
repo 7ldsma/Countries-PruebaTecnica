@@ -28,8 +28,24 @@ export class ByRegionComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.countries = this.countriesService.cacheStore.byRegion.countries;
+    this.getAllCountries();
+
+    const cachedCountries = this.countriesService.cacheStore.byRegion.countries;
+
+    if( cachedCountries && cachedCountries.length > 0 ) {
+      this.countries = cachedCountries;
+    }
     this.selectedRegion = this.countriesService.cacheStore.byRegion.region;
+  }
+
+
+  getAllCountries(): void {
+    this.selectedRegion = undefined;
+    this.countriesService.getAllCountries()
+      .subscribe(countries => {
+        this.countries = countries;
+      });
+      console.log('hola', this.countries)
   }
 
 
@@ -42,7 +58,6 @@ export class ByRegionComponent implements OnInit {
       this.countries = countries;
     })
 
-    console.log(this.countries)
   }
 
 

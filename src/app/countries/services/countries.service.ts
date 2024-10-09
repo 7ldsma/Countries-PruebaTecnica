@@ -47,6 +47,12 @@ export class CountriesService {
             
         }
 
+        
+    getAllCountries(): Observable<Country[]> {
+        const url = `${this.apiUrl}/all`;  // Endpoint para obtener todos los países
+        return this.getCountriesRequest(url);
+    }
+
 
 
     private getCountriesRequest( url: string ): Observable<Country[]> {
