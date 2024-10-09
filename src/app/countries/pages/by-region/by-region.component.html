@@ -11,7 +11,14 @@
                 (click)="seachByRegion(region)">
                 {{ region }}
             </button>
-
+        }
+        @if (selectedRegion) {
+            <button
+                class="btn btn-outline-primary"
+                (click)="getAllCountries()">
+                Show All
+            </button>
+            
         }
 
     </div>
