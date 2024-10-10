@@ -15,5 +15,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
   title = 'countriesApp';
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+ }
 }

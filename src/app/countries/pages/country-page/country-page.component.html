@@ -1,19 +1,10 @@
-<ng-template #loading>
-    <div class="alert alert-info text-center">
-        Please wait a few seconds.
-    </div>
-</ng-template>
+
 
 @if (country) {
 
-    <div>
-        <div class="row">
-            <div class="col-12">
-            <h2>Country: <strong> {{ country.name.common }}</strong></h2>
-        </div>
-        <hr>
-    </div>
-</div>
+    <h2>Country: <strong> {{ country.name.common }}</strong></h2>
+    <hr>
+
 
 <div class="row">
     <div class="col-4">
@@ -24,6 +15,11 @@
         <h3>Information</h3>
         
         <ul class="list-group">
+            <li class="list-group-item">
+                <strong>Capital:</strong>
+                {{ country.capital }}
+            </li>
+
             <li class="list-group-item">
                 <strong>Population:</strong>
                 {{ country.population | number }}
