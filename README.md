@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Visit Demo
 
-https://countries-prueba-tecnica.vercel.app/countries/all
+https://countries-prueba-tecnica.vercel.app
 
 ## Development server
 
